@@ -16,15 +16,13 @@ header{
 
 .search{
     display: inline flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
     text-decoration: none;
     border-radius: 180px;
     background-color: #f1f0ed;
     color: #222222;
-    padding: 0px;
-    margin: 20px 20px 20px 50px;
+    margin: 20px;
 }
 
 .contenedor1{
@@ -35,20 +33,17 @@ header{
     border-radius: 180px;
     background-color: #f1f0ed;
     color: #222222;
-    padding: 0px;
-    gap: 35px;
     margin: 20px;
 }
 
 .contact{
     display: inline flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: right;
+    text-align: right;
     border-radius: 180px;
     background-color: #222222;
     color: #f1f0ed;
-    padding: 0px;
     margin: 20px;
 }
 
@@ -58,4 +53,63 @@ header{
     align-items: center;
     width: 95%;
     border-radius: 27px;
+}
+
+.medio{
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #f1f0ed;
+    color: #222222;
+    margin-top: 30px;
+    justify-content: center;
+    padding: 12px;
+    font-size: 21.7px;
+}
+
+.sellers{
+    margin: 20px 20px 20px 35px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    color: #222222;
+    font-size: 10px
+}
+
+.productos{
+    display: grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap: 28px
+}
+
+.cartaproducto{
+    display: inline flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f1f0ed;
+    color: #222222;
+}
+
+.nombre{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.descripcion{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.precio{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
