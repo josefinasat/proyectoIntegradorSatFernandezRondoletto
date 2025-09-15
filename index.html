@@ -11,21 +11,25 @@
 </head>
 <body>
     <header>
-        <a href="./index.html"><img src="./img/LogoNuda.png" alt="logo"></a> 
-        <form action="search-results.html" method="get">
-            <input type="text" name="buscar" value="" placeholder="Buscar">
-        </form>
+        <div class="izquierda">
+            <a class="logo" href="./index.html"><img src="./img/LogoNuda.png" alt="logo"></a> 
+            <form class="search" action="search-results.html" method="get">
+                <input type="text" name="buscar" value="" placeholder="Search">
+             </form>
+        </div>
     
-        <nav>
-            <ul>
-                <li><a href="">Log In</a></li>
-                <li><a href="">Register</a></li>
-                <li><a href="">About Us</a></li>
-            </ul>
-        </nav>
-        <nav class="contact">
-            <a class="contact" href="">Home</a>
-        </nav>
+        <div class="derecha">
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="./login.html">Log In</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                </ul>
+            </nav>
+            <nav class="navegacion">
+                <a class="home" href="">Home</a>
+            </nav>
+        </div>
+
     </header>
 
     <aside>
@@ -67,35 +71,35 @@
     </aside>
 
     <main>
-        <img class="fotoprincipal" src="./img/fotoprincipal.png" alt="foto principal">
-        <h2 class="sellers">● The best sellers</h2>
+        <img src="./img/fotoprincipal.png" alt="foto principal">
+        <h2>● The best sellers</h2>
         
-        <section class="productos">
-            <article class="producto1">
-                <div class="precio">$35.00</div>
-                <button class="flechaizquerda" aria-label="Anterior">❮</button>
-                <button class="flechaderecha" aria-label="Siguiente">❯</button>
+        <section>
+            <article">
+                <div>$35.00</div>
+                <button aria-label="Anterior">❮</button>
+                <button aria-label="Siguiente">❯</button>
                 <div><img src="../proyectoIntegradorSatFernandezRondoletto/img/Serum.png" alt=""></div>
-                <h3 class="nombre">HYALURONIC ACID SERUM</h3>
-                <p class="descripcion">The conecentrated glow drop</p>
-                <a href="./product.html"><button>See details</button></a> 
+                <h3>HYALURONIC ACID SERUM</h3>
+                <p>The conecentrated glow drop</p>
+                <a><button>See details</button></a> 
             </article>
-            <article class="producto1">
-                <p class="precio">$20.00</p>
-                <button class="flechaizquerda" aria-label="Anterior">❮</button>
-                <button class="flechaderecha" aria-label="Siguiente">❯</button>
+            <article>
+                <p>$20.00</p>
+                <button aria-label="Anterior">❮</button>
+                <button aria-label="Siguiente">❯</button>
                 <div><img src="../proyectoIntegradorSatFernandezRondoletto/img/LipMask.png" alt=""></div>
-                <h3 class="nombre">LIP MASK</h3>
-                <p class="descripcion">The nourishing lip care</p>
+                <h3>LIP MASK</h3>
+                <p>The nourishing lip care</p>
                 <a href="./product.html"><button>See details</button></a> 
             </article>
-            <article class="producto1">
-                <p class="precio">$27.00</p>
-                <button class="flechaizquerda" aria-label="Anterior">❮</button>
-                <button class="flechaderecha" aria-label="Siguiente">❯</button>
+            <article>
+                <p>$27.00</p>
+                <button aria-label="Anterior">❮</button>
+                <button aria-label="Siguiente">❯</button>
                 <div><img src="../proyectoIntegradorSatFernandezRondoletto/img/Tonico.png" alt=""></div>
-                <h3 class="nombre">FACIAL TONIC SPRAY</h3>
-                <p class="descripcion">The refreshing daily mist</p>
+                <h3>FACIAL TONIC SPRAY</h3>
+                <p>The refreshing daily mist</p>
                 <a href="./product.html"><button>See details</button></a> 
             </article>
         </section>

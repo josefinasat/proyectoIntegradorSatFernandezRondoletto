@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Resolutados de busqueda</title>
 </head>
 <body>
-     <header>
-        <a href="./index.html"><img src="./img/LogoNuda.png" alt="logo"></a> 
-        <form action="search-results.html" method="get">
-            <input type="text" name="buscar" value="" placeholder="Buscar">
-        </form>
+    <header>
+        <div class="izquierda">
+            <a class="logo" href="./index.html"><img src="./img/LogoNuda.png" alt="logo"></a> 
+            <form class="search" action="search-results.html" method="get">
+                <input type="text" name="buscar" value="" placeholder="Search">
+             </form>
+        </div>
     
-        <nav>
-            <ul>
-                <li><a href="">Log In</a></li>
-                <li><a href="">Register</a></li>
-                <li><a href="">About Us</a></li>
-            </ul>
-        </nav>
-        <nav class="contact">
-            <a class="contact" href="">Home</a>
-        </nav>
+        <div class="derecha">
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="./login.html">Log In</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                </ul>
+            </nav>
+            <nav class="navegacion">
+                <a class="home" href="">Home</a>
+            </nav>
+        </div>
+
     </header>
 
   <main>
