@@ -9,6 +9,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .izquierda{
@@ -24,9 +28,13 @@ header{
 }
 
 .search{
-    background: rgb(228, 227, 228);
+    background: #f1f0ed;
     border-radius: 30px;
     padding: 10px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .search input{
@@ -47,7 +55,7 @@ header{
     list-style: none;
     margin: 0;
     gap: 20px;
-    background-color: rgb(228, 227, 228);
+    background-color: #f1f0ed;
     border-radius: 30px;
     padding: 10px 20px;
     font-size: 17px;
@@ -55,12 +63,12 @@ header{
 
 .navegacion a{
     text-decoration: none;
-    color: dimgray;
+    color: #444;
 }
 
 .home{
     justify-content: end;
-    background-color: rgb(228, 227, 228);
+    background-color: #f1f0ed;
     border-radius: 30px;
     padding: 10px 20px;
     margin: 20px;
@@ -77,7 +85,12 @@ aside{
     width: 20%;
     padding: 20px;
     margin-left: 10px;
-    background-color: rgb(228, 217, 223);
+    background-color: #f1f0ed;
+    border-radius: 30px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 aside h2{
@@ -97,6 +110,19 @@ aside a{
     padding: 8px 12px;
 }
 
+/*section*/
+
+.fotoprincipal{
+    width: 80%;
+    height: 620px;
+    margin: 0px 20px 20px 20px;
+    border-radius: 30px;
+}
+
+.best{
+    
+}
+
 /*footer*/
 
 footer{
@@ -107,6 +133,13 @@ footer{
 }
 
 footer h4{
+    margin-bottom: 10px;
     letter-spacing: 2px;
-    font-weight: 500;
+    padding: 10px;
+    background-color: #f1f0ed;
+    border-radius: 30px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
