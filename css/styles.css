@@ -78,19 +78,20 @@ header{
 /*aside*/
 main{
     display: flex;
-    height: 100%;
-}
-
-aside{
-    width: 20%;
-    padding: 20px;
-    margin-left: 10px;
-    background-color: #f1f0ed;
-    border-radius: 30px;
+    align-items: flex-start;
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+}
+
+aside{
+    width: 20%;
+    height: 100vh;
+    padding: 20px;
+    margin-left: 10px;
+    background-color: #f1f0ed;
+    border-radius: 30px;
 }
 
 aside h2{
@@ -113,14 +114,64 @@ aside a{
 /*section*/
 
 .fotoprincipal{
-    width: 80%;
-    height: 620px;
+    width: 72%;
+    height: auto;
     margin: 0px 20px 20px 20px;
     border-radius: 30px;
 }
 
 .best{
-    
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.productos{
+    background-color: #f1f0ed;
+    width: 300px;
+    padding: 25px;
+    border-radius: 30px;
+    margin: 20px;
+    text-align: center;
+}
+
+.precio{
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: end;
+}
+
+.medio{
+    display: flex;
+    justify-content: center;
+}
+
+.flecha{
+    border: none;
+}
+
+.imagenes{
+    width: 200px;
+    height: auto;
+    align-items: center;
+}
+
+.nombre{
+    font-size: 18px;
+    text-align: left;
+    padding: 3px;
+}
+
+.descripcion{
+    font-size: 13px;
+    text-align: left;
+    padding: 3px;
+}
+
+.details{
+    text-align: left;
+    padding: 3px;
+    margin-top: 3px;
 }
 
 /*footer*/
