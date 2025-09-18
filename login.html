@@ -14,14 +14,18 @@
             <a class="logo" href="./index.html"><img src="./img/LogoNuda.png" alt="logo"></a> 
             <form class="search" action="search-results.html" method="get">
                 <input type="text" name="buscar" value="" placeholder="Search">
-             </form>
+            </form>
         </div>
     
         <div class="derecha">
             <nav class="navegacion">
                 <ul>
-                    <li><a href="./login.html">Log In</a></li>
-                    <li><a href="./register.html">Register</a></li>
+                    <li>
+                        <a href="./login.html">Log In</a>
+                    </li>
+                    <li>
+                        <a href="./register.html">Register</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="navegacion">
@@ -33,58 +37,37 @@
 
     <main>
         <aside>
-        <h2>Category</h2> 
-        <nav>
-            <ul>
-                <a href="./category.html">
-                    <li>
-                        Beauty
-                    </li>
-                </a>
-                <a href="./category.html">
-                    <li>
-                        Skin Care
-                    </li>
-                </a>
-                <a href="./category.html">
-                    <li>
-                        Beauty Tools
-                    </li>
-                </a>
-                <a href="./category.html">
-                    <li>
-                        Hair
-                    </li>
-                </a>
-                <a href="./category.html">
-                    <li>
-                        Fragances
-                    </li>
-                </a>
-                <a href="./category.html">
-                    <li>
-                        MakeUp Bag
-                    </li>
-                </a>
-            </ul>
-        </nav>
+            <h2>Category</h2> 
+            <nav>
+                <ul>
+                    <li><a href="./category.html">Beauty</a></li>
+                    <li><a href="./category.html">Skin Care</a></li>
+                    <li><a href="./category.html">Beauty Tools</a></li>
+                    <li><a href="./category.html"></a>Hair</li>
+                    <li><a href="./category.html">Fragances</a></li>
+                    <li><a href="./category.html">MakeUp Bag</a></li>
+                </ul>
+            </nav>
         </aside>
-        <section class="iniciarsesion">
-            <h1 class="login">Login</h1>
-            <form action="index.html" method="get">
-                <div>
-                    <label for="email">Email: </label>
-                    <input id="email" type="email" name="email" value="">
-                </div>
-                <div>
-                    <label for="contraseña">Contraseña: </label>
-                    <input id="contraseña" type="password" name="contraseña" value="">
-                </div>
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-        </section>
+
+        <div class="login">
+            <section class="iniciarsesion">
+                <form action="index.html" method="get">
+                    <h1 class="bloques titulo">Login</h1>
+                    <div class="bloques">
+                        <label for="email">Email: </label>
+                        <input id="email" type="email" name="email" value="">
+                    </div>
+                    <div class="bloques">
+                        <label for="contraseña">Password: </label>
+                        <input id="contraseña" type="password" name="contraseña" value="">
+                    </div>
+                    <div>
+                        <button type="submit">Submit: </button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
     <footer>
