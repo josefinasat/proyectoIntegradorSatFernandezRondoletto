@@ -809,8 +809,89 @@ aside a {
 }
 
 .category-page{
+    main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+   
+    aside {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f0ed;
+    border-radius: 0;
+    margin-top: 15px;
+  }
 
-    
+  aside h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  aside ul {
+    display: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+  }
+
+  aside li {
+    margin: 5px 8px;
+  }
+
+  .titulosearch {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .searchr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .seactionsearch {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 90%;
+  }
+  .productos {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .imagenes {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px;
+  }
+
+  footer img {
+    width: 150px;
+    margin-bottom: 5px;
+  }
+
+
+
 
 }
 
