@@ -90,7 +90,7 @@ aside{
     height: 100vh;
     padding: 20px;
     margin-left: 10px;
-    background-color: #f5f5f5;
+    background-color: #f1f0ed;
     border-radius: 30px;
 }
 
@@ -198,7 +198,7 @@ section{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 30px;
     background-color: #222222;
     border-radius: 30px;
     padding: 15px;
@@ -272,17 +272,17 @@ section{
 
 /*category*/
 
-.category{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.skinbody{
+    width: 100%;
+    margin-left: 20px;
 }
 
 .productoscategory{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     width: fit content;
 }
 
@@ -294,6 +294,7 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 30px;
+    margin-left: 10px;
 }
 
 .iniciarsesion{
@@ -393,16 +394,38 @@ section{
     font-style: normal;
 }
 
+/*search-results*/
+
+.titulosearch{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 5px; 
+    margin-left: 20px;
+    width: 100%;
+}
+
+.searchr{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.seactionsearch{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
 /*footer*/
 
 footer{
-    flex-direction: column;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-}
-
-footer h4{
     margin: 10px;
     letter-spacing: 2px;
     padding: 10px;
@@ -414,19 +437,73 @@ footer h4{
     font-style: normal;
 }
 
-/*search-results*/
-
-.searchr{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
+.imagenfooter{
+    width: 200px;
 }
 
-.seactionsearch{
-    display: flex;
+/*RESPONSIVE*/
+@media (max-width: 420px){
+    /*header*/
+header{
     flex-wrap: wrap;
-    flex-direction: column;
+}
+
+.izquierda{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 90px;
+}
+
+.search{
+    background: #f1f0ed;
+    border-radius: 30px;
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.search input{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+.derecha{
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navegacion ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 20px;
+    background-color: #f1f0ed;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+.navegacion a{
+    text-decoration: none;
+    color: #444;
+}
+
+.home{
+    justify-content: end;
+    background-color: #f1f0ed;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 17px;
+}
 }
 
 
