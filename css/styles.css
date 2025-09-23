@@ -180,6 +180,9 @@ section{
     text-align: left;
     padding: 3px;
     margin-top: 3px;
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
 }
 
 .nudastudio{
@@ -270,11 +273,17 @@ section{
 /*category*/
 
 .category{
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.skinbody{
-    margin-left: 15px;
+.productoscategory{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: fit content;
 }
 
 /*login y register*/
@@ -374,6 +383,14 @@ section{
     margin-left: 10px;
     padding: 15px;
     gap: 4px;
+}
+
+.submit{
+    padding: 5px;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /*footer*/
