@@ -203,6 +203,7 @@ section{
     margin: 7px; 
 }
 
+
 .findus{
     text-decoration: none;
     color: #f1f0ed;
@@ -406,12 +407,6 @@ section{
     width: 100%;
 }
 
-.seactionsearch{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-}
 
 /*footer*/
 
@@ -473,7 +468,12 @@ footer{
 
     .home{
         font-size: 15px;
-        margin-right: 0px;
+        margin-right: 0%;
+        margin-left: 115px;
+    }
+    
+    .logregister{
+        width: 60px;
     }
 
     /*Aside*/
@@ -532,6 +532,10 @@ footer{
 
     .precio{
         font-size: 13px;
+    }
+
+    .imagenes {
+        width: 80%;
     }
 
     .nombre{
@@ -645,51 +649,6 @@ footer{
         align-items: center;
         gap: 10px;
     }
-
-    /*
-    .searchr{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-}
-    */
-
-    .seactionsearch {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        width: 90%;
-    }
-
-    .imagenes {
-        width: 80%;
-        max-width: 250px;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    /*
-
-}
-
-.searchr{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.seactionsearch{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-}
-    
-    */
 
     /*Category*/
 
