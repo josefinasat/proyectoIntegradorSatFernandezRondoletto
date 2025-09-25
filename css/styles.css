@@ -128,7 +128,7 @@ aside a{
 }
 
 .productos{
-    background-color: #f5f5f5; 
+    background-color: #f1f0ed; 
     border-radius: 15px;
     padding: 15px;
     margin-top: 10px;
@@ -316,6 +316,14 @@ section{
     letter-spacing: 2.5px;
 }
 
+.submit{
+    padding: 5px;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 /*product*/
 
 .producto{
@@ -336,7 +344,7 @@ section{
 .contenidop{
     justify-content: center;
     letter-spacing: 1px;
-    background-color: #f5f5f5;
+    background-color: #f1f0ed;
     padding: 60px 20px 60px 20px;
     border-radius: 30px;
 }
@@ -351,7 +359,7 @@ section{
 }
 
 .reviews{
-    background-color: #f5f5f5;
+    background-color: #f1f0ed;
     padding: 20px 10px 20px 10px;
     border-radius: 30px;
     justify-content: center;
@@ -377,13 +385,7 @@ section{
     gap: 4px;
 }
 
-.submit{
-    padding: 5px;
-    font-family: "Raleway", sans-serif;
-    font-weight: normal;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+
 
 /*search-results*/
 
@@ -414,10 +416,11 @@ section{
 /*footer*/
 
 footer{
+    width: 99%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 10px auto;
     letter-spacing: 2px;
     padding: 10px;
     background-color: #f1f0ed;
@@ -435,348 +438,285 @@ footer{
 /*RESPONSIVE*/
 @media (max-width: 420px){
    /*header*/
-header{
-    flex-wrap: wrap;
-    max-width: 100%;
-}
+    header{
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
 
-.izquierda{
-    align-items: center;
-    max-width: 100%;
-}
+    .izquierda{
+        align-items: center;
+        max-width: 90%;
+    }
 
-.logo{
-    height: 90px;
-}
+    .logo{
+        height: 90px;
+    }
 
-.search input{
-    font-size: 15px;
-}
+    .search input{
+        font-size: 15px;
+    }
 
-.derecha{
-    align-items: center;
-    width: 100%;
-}
+    .derecha{
+        align-items: center;
+        width: 100%;
+    }
 
-.navegacion ul{
-    font-size: 15px;
-    margin-left: 10px;
-    justify-content: flex-start;
-}
+    .navegacion ul{
+        font-size: 15px;
+        margin-left: 10px;
+        justify-content: flex-start;
+    }
 
-.navegacion a{
-    justify-content: flex-end;
-}
+    .navegacion a{
+        justify-content: flex-end;
+    }
 
-.home{
-    font-size: 15px;
-    margin-right: 0px;
-}
+    .home{
+        font-size: 15px;
+        margin-right: 0px;
+    }
 
-/*Aside*/
+    /*Aside*/
 
-main {
-    flex-direction: column;
-    align-items: center;
-  }
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
 
-aside{
-    width: 95%;
-    height: auto;
-    padding: 12px;
-    margin: 15px;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
+    aside{
+        width: 90%;
+        height: auto;
+        padding: 12px;
+        margin: 15px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
    
 
-aside h2{
-    font-size: 15px;
-    margin: 5px;
+    aside h2{
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    aside ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    /*Index*/
+
+    .fotoprincipal{
+        display: flex;
+        width: 90%;
+        margin: 10px;
+        align-items: center;
+        justify-self: center;
+    }
+
+    .best{
+        margin: 25px 0px 10px 25px;
+        font-size: 20px;
+    }
+
+    .productos{
+        margin-top: 16px;
+        width: 220px;
+    }
+
+    section{ 
+        gap: 7px;                   
+    }
+
+    .precio{
+        font-size: 13px;
+    }
+
+    .nombre{
+        font-size: 15px;
+    }
+
+    .descripcion{
+        font-size: 12px;
+    }
+
+    .details{
+        font-size: 12px;
+    }
+
+    .abajo{
+        padding: 10px;
+        align-items: center;
+        max-width: 75%;
+        margin: 15px auto;
+    }
+
+    .carretearriba{
+        display: flex;
+        gap: 23px;
+    }
+
+    .younuda{
+        font-size: 18px;
+    }
+
+    .findus{
+        font-size: 12px;
+        margin-right: 0;
+    }
+
+    .imgcarrete{
+        height: 200px;
+        display: block;
+        margin: 15px auto;
+    }
+
+    /*Log In y Register*/
+
+    .login {
+        width: 100%;
+        margin: 3px auto;
+        background-position: center;
+        border-radius: 0%;
+    }
+
+    .iniciarsesion form {
+        gap: 20px;
+
+    }
+
+    .titulo{
+        font-size: 25px;
+    }
+
+    .bloques{
+        font-size: 13px;
+    }
+
+    /*Product*/
+
+    .detalleprod {
+        flex-direction: column; 
+        width: 90%;
+    }
+
+    .fotoprod {
+        width: 90%;
+        height: auto;
+    }
+
+    .contenidop {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .titulodescripcion{
+        font-size: 23px;
+    }
+
+    .reviews {  
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .reviews h2{
+        margin-top: 10px;
+    }
+
+    .review {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /*Search*/
+
+    .titulosearch {
+        width: 100%;
+        align-items: center;
+        margin: 10px auto;
+        font-size: 15px;
+    }
+ 
+    .searchr {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /*
+    .searchr{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+    */
+
+    .seactionsearch {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        width: 90%;
+    }
+
+    .imagenes {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /*
+
 }
 
-aside ul{
+.searchr{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.seactionsearch{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    font-size: 12px;
-}
-
-/*Index*/
-
-.fotoprincipal{
-    display: flex;
-    width: 90%;
-    margin: 10px;
-    align-items: center;
-    justify-self: center;
-}
-
-.best{
-    margin: 25px 0px 10px 25px;
-    font-size: 20px;
-}
-
-.productos{
-    margin-top: 16px;
-    width: 220px;
-}
-
-section{ 
-    gap: 7px;                   
-}
-
-.precio{
-    font-size: 13px;
-}
-
-.nombre{
-    font-size: 15px;
-}
-
-.descripcion{
-    font-size: 12px;
-}
-
-.details{
-    font-size: 12px;
-}
-
-.abajo{
-    padding: 10px;
-    align-items: center;
-    max-width: 75%;
-    margin: 15px auto;
-}
-
-.carretearriba{
-    display: flex;
-    gap: 23px;
-}
-
-.younuda{
-    font-size: 18px;
-}
-
-.findus{
-    font-size: 12px;
-    margin-right: 0;
-}
-
-.imgcarrete{
-    height: 200px;
-    display: block;
-    margin: 15px auto;
-}
-
-/*Log In y Register*/
-.login {
-    width: 100%;
-    margin: 3px auto;
-    background-position: center;
-    border-radius: 0%;
-}
-
-.iniciarsesion form {
-    gap: 20px;
-
-}
-
-.titulo{
-    font-size: 25px;
-}
-
-.bloques{
-    font-size: 13px;
-}
-
-/*Product*/
-
-.detalleprod {
-    display: column;
-    flex-direction: column; 
-    width: 90%;
-}
-
-.fotoprod {
-    width: 90%;
-    max-width: 300px;
-    height: auto;
-}
-
-.contenidop {
-width: 100%;
-text-align: center;
-background-color: #f5f5f5;
-border-radius: 15px;
-padding: 15px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.contenidop h1,
-.contenidop p {
-    text-align: center;
-  }
-
-
-  .reviews {
-    width: 95%;
-    margin: 20px auto;
-    display: flex;
     flex-direction: column;
-    gap: 15px;
-    text-align: center;
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    padding: 10px;
-  }
-
-  .review {
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-  }
-
-/*
-
-.fotoprod{
-    width: 450px;
-}
-
-.contenidop{
-    justify-content: center;
-    letter-spacing: 1px;
-    background-color: #f5f5f5;
-    padding: 60px 20px 60px 20px;
-    border-radius: 30px;
-}
-.titulodescripcion{
-    font-size: 25px;
-    padding: 5px;
-}
-
-.contenidop p{
-    font-size: 15px;
-    padding: 5px;
-}
-
-.reviews{
-    background-color: #f5f5f5;
-    padding: 20px 10px 20px 10px;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px;
-    letter-spacing: 1px;
-    font-size: 15px;
-}
-.reviews h2{
-    text-align: center;
-}
-
-.reviews ul{
-    list-style: none;
-}
-
-.review{
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    margin-left: 10px;
-    padding: 15px;
-    gap: 4px;
-}
-
-.submit{
-    padding: 5px;
-    font-family: "Raleway", sans-serif;
-    font-weight: normal;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-*/
-
-/*Search*/
-
-  
-.titulosearch {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 20px;
     width: 100%;
-    margin-left: 20px;
-  }
+}
+    
+    */
 
- 
-.searchr {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 15px;
-  }
+    /*Category*/
 
-.seactionsearch {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    width: 90%;
-  }
+    .skinbody{
+        font-size: 25px;
+        text-align: center;
 
-.imagenes {
-    width: 80%;
-    max-width: 250px;
-    height: auto;
-    margin: 0 auto;
-  }
+        margin: 10px auto 0px auto;
+    }
 
+    .productoscategory{
+        margin: 5px;
+        gap: 15px;
+    }
 
-/*Category*/
+    /*Footer*/
+    footer {
+        text-align: center;
+        margin: 15px auto;
+        padding: 10px;
+        font-size: 12px;
+        width: 90%;
+    }
 
-.titulosearch {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 20px;
-    width: 100%;
-  }
-
-.searchr {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 15px;
-  }
-
-.seactionsearch {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    width: 90%;
-  }
-
-
-.imagenes {
-    width: 80%;
-    max-width: 250px;
-    height: auto;
-    margin: 0 auto;
-  }
-
-/*Footer*/
-footer {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 15px;
-    padding: 10px;
-    font-size: 12px;
-  }
-
-.imagenfooter{
-    width: 140px;
-    margin-bottom: 5px;
-  }
+    .imagenfooter{
+        width: 140px;
+    
+    }
 
 }
