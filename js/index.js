@@ -38,3 +38,43 @@ fetch(url)
         alert("Error al cargar las categorias");
         console.log(error);
     });
+
+
+    // productos
+
+    let beautyContainer = document.querySelector("#beautycontainer")
+    let skincareContainer = document.querySelector("#skincarecontainer")
+
+    function cargarCategoria(categoria, contenedor){
+        fetch('https://dummyjson.com/products/categories')
+            .then(function(response){
+                return response.json();
+        })
+            .then(function(data){
+                let productos = data.products;
+                let contenido = "";
+
+                for (let i = 0; i < productos.length && i < 10; i ++){
+                    contenido += `
+                        <article class = "productos"> 
+                            <img src = "${productos[i].thumbnail}" alt = "${productos[i].title}" class="imagenes"> 
+                            <h3 class = "nombre">${productos[i].title}</h3>
+                            <p class="descripcion">${productos[i].description}</p>
+                            <p class= "precio">${productos[i].price}</p>
+                            <a class="details"href="product.html?id=${productos[i].id}">
+                                Ver detalle
+                            </a>
+                            
+                        </article>
+                        `;
+                }
+                contendeor.innerHTML = contenido;
+
+        })
+        .catch(function(error){
+            console.log("Error:" + error)
+        });
+    }
+
+    cargarCategoria("beauty", beautyContainer);
+    cargarCategoria("skincare", skincareContainer);
