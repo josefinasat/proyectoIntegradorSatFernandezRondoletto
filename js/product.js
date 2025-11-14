@@ -3,19 +3,19 @@ let queryStringObj = new URLSearchParams (queryString);
 let id = queryStringObj.get('id');
 console.log(id);
 
-let foto = document.querySelector(".fotoprod");
+let foto = document.querySelector("#foto_producto");
 let titulo = document.querySelector(".titulodescripcion");
 
 let brand = document.querySelector("#brand");
 let description = document.querySelector("#description");
 let price = document.querySelector("#price");
-let categoryLink = document.querySelector("#categoryLink");
+let category = document.querySelector("#category");
 let stock = document.querySelector("#stock");
 let tags = document.querySelector("#tags");
-let reviewsDiv = document.querySelector("#reviews");
+let reviews = document.querySelector("#reviews");
 
 
-fetch (`https://dummyjson.com/products/${id}`)
+fetch ('https://dummyjson.com/products/1')
     .then(function(response){
         return response.json();
     })
@@ -43,10 +43,14 @@ fetch (`https://dummyjson.com/products/${id}`)
             let cadareview = data.review[i];
             reviews += `
             <article class="review">
-            <p><strong>Rating:</strong> ${r.rating}</p>
-            <p>"${r.comment}"</p>
-            <p><strong>Usuario:</strong> ${r.reviewerName}</p>
-            <p><strong>Fecha:</strong> ${r.date.slice(0, 10)}</p>
-            </article>`
+                <p><strong>Rating:</strong> ${cadareview.rating}</p>
+                <p>"${cadareview.comment}"</p>
+                <p><strong>Usuario:</strong> ${cadareview.reviewerName}</p>
+                <p><strong>Fecha:</strong> ${cadareview.date.slice(0, 10)}</p>
+            </article>`;
         }
+        reviewsDiv.innerHTML = htmlReviews;
     })
+    .catch(function(error){
+        console.log("Error: " + error);
+});
