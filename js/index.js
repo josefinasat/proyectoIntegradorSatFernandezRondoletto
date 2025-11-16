@@ -42,39 +42,57 @@ fetch(url)
 
     // productos
 
-    let beautyContainer = document.querySelector("#beautycontainer")
-    let skincareContainer = document.querySelector("#skincarecontainer")
+let beautyContainer = document.querySelector("#beautycontainer");
+let skincareContainer = document.querySelector("#skincarecontainer");
 
-    function cargarCategoria(categoria, contenedor){
-        fetch('https://dummyjson.com/products/categories')
-            .then(function(response){
-                return response.json();
-        })
-            .then(function(data){
-                let productos = data.products;
-                let contenido = "";
+let urlProductos =  "https://dummyjson.com/products";
 
-                for (let i = 0; i < productos.length && i < 10; i ++){
-                    contenido += `
-                        <article class = "productos"> 
-                            <img src = "${productos[i].thumbnail}" alt = "${productos[i].title}" class="imagenes"> 
-                            <h3 class = "nombre">${productos[i].title}</h3>
-                            <p class="descripcion">${productos[i].description}</p>
-                            <p class= "precio">${productos[i].price}</p>
-                            <a class="details"href="product.html?id=${productos[i].id}">
-                                Ver detalle
-                            </a>
-                            
-                        </article>
-                        `;
-                }
-                contendeor.innerHTML = contenido;
+fetch (urlProductos)
+    .then(function(response){
+        return response.json();
+    })
 
-        })
-        .catch(function(error){
-            console.log("Error:" + error)
-        });
+    .then(function(data){
+
+        let productos = data.products;
+
+        let bestSellers = [];
+        for (let i = 0; i < 10; i++){
+            bestSellers.push(productos[i]);
+        }
+
+        let randomProducts = [];
+        for (let i = 10; i < 20; i++) {
+            randomProducts.push(productos[i]);
+        }
+
+        mostrarProductos(bestSellers, beautyContainer);
+        mostrarProductos(randomProducts, skincareContainer);
+    })
+
+    .catch(function(error){
+        console.log("Error:" + error);
+    });
+
+function mostrarProductos(lista, contenedor){
+    let contenido = "";
+    for (let i = 0; i < lista.length; i++){
+        let producto = lista[i];
+        contenido += `
+        <article class= "productos">
+            <p class= "precio">$${producto.price}</p>
+            <div class= "medio">
+                <div>
+                    <img class= "imagenes" src="${producto.thumbnail}" alt="${producto.title}">
+                </div>
+            </div>
+            <h3 class="nombre">${producto.title}</h3>
+            <p class="descripcion">${producto.description}</p>
+            <a class="details" href="./product.html?id=${producto.id}">
+                Ver detalle
+            </a>
+        </article>
+     `;
     }
-
-    cargarCategoria("beauty", beautyContainer);
-    cargarCategoria("skincare", skincareContainer);
+    contenedor.innerHTML = contenido;
+}
