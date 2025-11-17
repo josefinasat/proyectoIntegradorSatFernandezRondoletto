@@ -1,23 +1,19 @@
-let campoBusqueda = document.querySelector("#buscar");
-let boton = document.querySelector("#boton");
-let formulario = document.querySelector(".search");
+let campoBusqueda = document.querySelector("form");
 
-formulario.addEventListener("submit", function () {
+campoBusqueda.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    if ( campoBusqueda.value == "") {
+        alert ("No se puede dejar el campo en blanco")
+    } else if (campoBusqueda.length < 3){
+        alert ("El termino debe tener al menos 3 letras")
+    } else{
+        this.submit()
+    }
     
-    let termino = campoBusqueda.value.trim();
-
-    if (termino == ""){
-        alert("El campo no puede estar vacio");
-        return false;
-    }
-
-    if (termino.length < 3){
-        alert("El termino debe tener al menos 3 caracteres.");
-        return false;
-    }
 })
 
-
+//aside
 let url = 'https://dummyjson.com/products/categories';
 
 fetch(url)
@@ -30,7 +26,7 @@ fetch(url)
         for (let i=0; i < datos.length; i++){
             lista.innerHTML +=`
                 <li>
-                    <a href="./category.html?categoria=${datos[i]}">${datos[i]}</a>
+                    <a href="./category.html?categoria=${datos[i]}">${datos[i].name}</a>
                 </li>`;
         }
     })
@@ -96,3 +92,6 @@ function mostrarProductos(lista, contenedor){
     }
     contenedor.innerHTML = contenido;
 }
+
+
+
