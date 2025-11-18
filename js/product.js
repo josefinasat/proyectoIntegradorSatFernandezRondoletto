@@ -39,56 +39,54 @@ fetch(url)
 let queryString = location.search;
 let queryStringObj = new URLSearchParams (queryString);
 let id = queryStringObj.get('id');
-console.log(id);
 
-let foto = document.querySelector("#foto_producto");
-let titulo = document.querySelector(".titulodescripcion");
+let detalleProd = document.querySelector(".detalleprod");
+let reviewsProd = document.querySelector(".review");
 
-let brand = document.querySelector("#brand");
-let description = document.querySelector("#description");
-let price = document.querySelector("#price");
-let category = document.querySelector("#category");
-let stock = document.querySelector("#stock");
-let tags = document.querySelector("#tags");
-let reviews = document.querySelector("#reviews");
-
-
-fetch ('https://dummyjson.com/products/1')
+fetch (`https://dummyjson.com/products/${id}`)
     .then(function(response){
         return response.json();
     })
+
     .then(function(data){
-        console.log(data);
-        foto_producto.innerHTML = `<img src="${data.images[0]}" alt="${data.title}">`;
+        detalleProd.innerHTML +=`
+        <article class="detalleprod"
+            <img class="fotoprod" src="${data.thumbnail}" alt="${data.title}">
+            <div class="contenidop">
+                <h1 class="titulodescripcion"> ${data.title}</h1>
+                <p><strong>Brand:</strong> ${data.brand} </p>
+                <p><strong>Description:</strong> ${data.description} </p>
+                <p><strong>Price:</strong> ${data.price} </p>
+                <p><strong>Category: </strong><a href="category.html?category=${data.category}">${data.category}</a></p>
+                <p><strong>Stock:</strong> ${data.stock} </p>
+                <p><strong>Tags:</strong></p>
+                <ul>
+                    <li>${data.tags[0]}</li>
+                    <li>${data.tags[1]}</li>
+                </ul>
+            </div>
+        </article>`;
 
-        titulo.innerText = data.title;
-        brand.innerText = data.brand;
-        description.innerText = data.description;
-        price.innerText = `$${data.price}`;
-        stock.innerText = data.stock;
-        link_categoria.innerText = data.category;
-        link_categoria.href = `category.html?cat=${data.category}`;
-
-
-        let tags = "";
-        for (let i = 0; i < data.tags.length; i++){
-            tags += `#${data.tags[i]}`;
+        let reviews = data.reviews
+        for (let i=0; i < 4; i++) {
+            let review = reviews[i]
+            reviewsProd.innerHTML += `
+            <article class="reviews">
+                <h2>User Review</h2>
+                <div class="review">
+                    <div>
+                        <ul>
+                            <li><strong>Rating:</strong>${review.rating}</li>
+                            <li><strong>Comment:</strong>${review.comment}</li>
+                            <li><strong>Date:</strong>${review.date}</li>
+                            <li><strong>User:</strong>${review.reviewerName}</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>`
         }
-        tags.innerText = tagsTexto;
-
-        let reviews = ""
-        for (let i = 0; i < data.reviews.length; i++){
-            let cadareview = data.review[i];
-            reviews += `
-            <article class="review">
-                <p><strong>Rating:</strong> ${cadareview.rating}</p>
-                <p>"${cadareview.comment}"</p>
-                <p><strong>Usuario:</strong> ${cadareview.reviewerName}</p>
-                <p><strong>Fecha:</strong> ${cadareview.date.slice(0, 10)}</p>
-            </article>`;
-        }
-        reviewsDiv.innerHTML = htmlReviews;
     })
+
     .catch(function(error){
         console.log("Error: " + error);
-});
+    });
