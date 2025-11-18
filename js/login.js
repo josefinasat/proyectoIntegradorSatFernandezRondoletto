@@ -37,17 +37,28 @@ fetch(url)
 
 //log in
 
-let form = document.querySelector("form");
+let formLogIn = document.querySelector("#iniciarsesion");
 let email = document.querySelector("#email");
 let password = document.querySelector("#contraseña")
 
-form.addEventListener("submit", function(){
-    if (email.value === ""){
-        alert("El email es obligatorio");
+formLogIn.addEventListener("submit", function(event){
+    event.preventDefault();
+    if (email.value == ""){
+        alert("El campo Email es obligatorio, completarlo.");
         return;
     }
-    if (password.value === "") {
-        alert("La contraseña es obligatoria")
+    else if (password.value === ""){
+        alert("El campo Contraseña es obligatorio, completarlo.")
         return;
+    }
+    else if (password.value.length < 6){
+        alert("La contraseña debe tener al menos 6 caracteres.")
+        return;
+    }
+    else{
+        formLogIn.submit()
+        let mail = document.querySelector("#mail")
+        let mailValue = email.value
+        localStorage.setItem("Email del usuario", mailValue)
     }
 })
