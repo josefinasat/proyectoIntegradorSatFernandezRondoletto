@@ -19,18 +19,20 @@
       <a class="logo" href="./index.html"><img src="./img/NudaCremaLogo.png" alt="logo"></a>
       <form class="search" action="search-results.html" method="get">
         <input type="text" name="buscar" value="" placeholder="Search">
+        <button type="submit">Buscar</button>
       </form>
     </div>
 
     <div class="derecha">
       <nav class="navegacion">
-        <ul>
+        <ul id="listacreadora">
           <li class="logregister">
-            <a href="./login.html">Log In</a>
+            <a class="login" href="./login.html">Log In</a>
           </li>
           <li class="logregister">
-            <a href="./register.html">Register</a>
+            <a class="register" href="./register.html">Register</a>
           </li>
+          <p id="bienvenida" class="logregister"></p>
         </ul>
       </nav>
       <nav class="navegacion">
@@ -146,6 +148,8 @@
     <h4>By: Catalina Rondoletto, Josefina Sat y Sol Fernandez Barisic</h4>
   </footer>
   <script src="./js/product.js"></script>
+  <script src="./js/saludo.js"></script>
+  <script src="js/logout.js"></script>
 </body>
 
 </html>

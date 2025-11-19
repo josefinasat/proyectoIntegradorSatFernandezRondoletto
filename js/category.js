@@ -1,12 +1,12 @@
-let campoBusqueda = document.querySelector(".search");
-let inputBusqueda = document.querySelector(".busqueda");
+let campoBusqueda3 = document.querySelector(".search");
+let inputBusqueda3 = document.querySelector(".busqueda");
 
-campoBusqueda.addEventListener('submit', function(event){
+campoBusqueda3.addEventListener('submit', function(event){
     event.preventDefault();
 
-    if ( inputBusqueda.value == "") {
+    if ( inputBusqueda3.value == "") {
         alert ("No se puede dejar el campo en blanco")
-    } else if (inputBusqueda.value.length < 3){
+    } else if (inputBusqueda3.value.length < 3){
         alert ("El termino debe tener al menos 3 letras")
     } else{
         this.submit()
@@ -15,17 +15,17 @@ campoBusqueda.addEventListener('submit', function(event){
 })
 
 //aside
-let url = 'https://dummyjson.com/products/categories';
+let url3 = 'https://dummyjson.com/products/categories';
 
-fetch(url)
+fetch(url3)
     .then(function (respuesta) {
         return respuesta.json();
     })
     .then(function (datos) {
-        let lista = document.querySelector("#lista-categorias");
+        let lista3 = document.querySelector("#lista-categorias");
 
         for (let i=0; i < datos.length; i++){
-            lista.innerHTML +=`
+            lista3.innerHTML +=`
                 <li>
                     <a href="./category.html?categoria=${datos[i]}">${datos[i].name}</a>
                 </li>`;

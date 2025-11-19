@@ -26,7 +26,12 @@ header{
     width: auto;
     display: flex;
 }
-
+#bienvenida{
+    cursor: pointer;
+}
+#botonlogout1{
+    cursor: pointer;
+}
 .search{
     background: #f1f0ed;
     border-radius: 30px;
@@ -87,7 +92,6 @@ main{
 
 aside{
     width: 20%;
-    height: 100vh;
     padding: 20px;
     margin-left: 10px;
     background-color: #f1f0ed;

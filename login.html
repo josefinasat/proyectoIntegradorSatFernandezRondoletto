@@ -20,18 +20,20 @@
             <a class="logo" href="./index.html"><img src="./img/NudaCremaLogo.png" alt="logo"></a>
             <form class="search" action="search-results.html" method="get">
                 <input type="text" name="buscar" value="" placeholder="Search">
+                <button type="submit">Buscar</button>
             </form>
         </div>
 
         <div class="derecha">
             <nav class="navegacion">
-                <ul>
+                <ul id="listacreadora">
                     <li class="logregister">
-                        <a href="./login.html">Log In</a>
+                        <a class="login" href="./login.html">Log In</a>
                     </li>
                     <li class="logregister">
-                        <a href="./register.html">Register</a>
+                        <a class="register" href="./register.html">Register</a>
                     </li>
+                    <p id="bienvenida" class="logregister"></p>
                 </ul>
             </nav>
             <nav class="navegacion">
@@ -44,19 +46,8 @@
         <aside>
             <h2>Category</h2>
             <nav>
-                <ul>
-                    <li><a href="./category.html">Beauty</a></li>
-                    <li><a href="./category.html">Skin Care</a></li>
-                    <li><a href="./category.html">Beauty Tools</a></li>
-                    <li><a href="./category.html">Hair</a></li>
-                    <li><a href="./category.html">Fragances</a></li>
-                    <li><a href="./category.html">MakeUp Bag</a></li>
-                    <li><a href="./category.html">MakeUp</a></li>
-                    <li><a href="./category.html">Cleansers</a></li>
-                    <li><a href="./category.html">Eye Care</a></li>
-                    <li><a href="./category.html">Lip Care</a></li>
-                    <li><a href="./category.html">Sun Protection</a></li>
-                    <li><a href="./category.html">Mask & Treatments</a></li>
+                <ul id="lista-categorias">
+                    
                 </ul>
             </nav>
         </aside>
@@ -66,8 +57,8 @@
             <form id="iniciarsesion" action="index.html" method="get">
                 <h1 class="titulo">Log In</h1>
                 <div class="bloques">
-                    <label for="email">Email: </label>
-                    <input id="email" type="email" name="email" value="">
+                    <label for="emailusuario">Email: </label>
+                    <input id="emailusuario" type="email" name="email" value="">
                 </div>
                 <div class="bloques">
                     <label for="contraseña">Password: </label>
@@ -88,6 +79,8 @@
         <h4>By: Catalina Rondoletto, Josefina Sat y Sol Fernandez Barisic</h4>
     </footer>
     <script src="./js/login.js"></script>
+    <script src="./js/saludo.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 
 </html>

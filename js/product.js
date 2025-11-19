@@ -1,12 +1,12 @@
-let campoBusqueda = document.querySelector(".search");
-let inputBusqueda = document.querySelector(".busqueda");
+let campoBusqueda5 = document.querySelector(".search");
+let inputBusqueda5 = document.querySelector(".busqueda");
 
-campoBusqueda.addEventListener('submit', function(event){
+campoBusqueda5.addEventListener('submit', function(event){
     event.preventDefault();
 
-    if ( inputBusqueda.value == "") {
+    if ( inputBusqueda5.value == "") {
         alert ("No se puede dejar el campo en blanco")
-    } else if (inputBusqueda.value.length < 3){
+    } else if (inputBusqueda5.value.length < 3){
         alert ("El termino debe tener al menos 3 letras")
     } else{
         this.submit()
@@ -15,17 +15,17 @@ campoBusqueda.addEventListener('submit', function(event){
 })
 
 //aside
-let url = 'https://dummyjson.com/products/categories';
+let url5 = 'https://dummyjson.com/products/categories';
 
-fetch(url)
+fetch(url5)
     .then(function (respuesta) {
         return respuesta.json();
     })
     .then(function (datos) {
-        let lista = document.querySelector("#lista-categorias");
+        let lista5 = document.querySelector("#lista-categorias");
 
         for (let i=0; i < datos.length; i++){
-            lista.innerHTML +=`
+            lista5.innerHTML +=`
                 <li>
                     <a href="./category.html?categoria=${datos[i]}">${datos[i].name}</a>
                 </li>`;
@@ -51,9 +51,10 @@ fetch (`https://dummyjson.com/products/${id}`)
     })
 
     .then(function(data){
+        console.log(data)
         detalleProd.innerHTML +=`
-        <article class="detalleprod"
-            <img class="fotoprod" src="${data.thumbnail}" alt="${data.title}">
+        <article class="detalleprod">
+            <img class="fotoprod" src="${data.images[0]}" alt="${data.title}">
             <div class="contenidop">
                 <h1 class="titulodescripcion"> ${data.title}</h1>
                 <p><strong>Brand:</strong> ${data.brand} </p>
