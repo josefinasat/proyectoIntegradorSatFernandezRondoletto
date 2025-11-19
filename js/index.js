@@ -1,11 +1,12 @@
-let campoBusqueda = document.querySelector("form");
+let campoBusqueda = document.querySelector(".search");
+let inputBusqueda = document.querySelector(".busqueda");
 
 campoBusqueda.addEventListener('submit', function(event){
     event.preventDefault();
 
-    if ( campoBusqueda.value == "") {
+    if ( inputBusqueda.value == "") {
         alert ("No se puede dejar el campo en blanco")
-    } else if (campoBusqueda.length < 3){
+    } else if (inputBusqueda.value.length < 3){
         alert ("El termino debe tener al menos 3 letras")
     } else{
         this.submit()
