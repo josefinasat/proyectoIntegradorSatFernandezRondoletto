@@ -146,7 +146,11 @@ section{
     gap: 20px;               
     flex-wrap: wrap;         
 }
-
+.contenedores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .precio{
     font-size: 15px;
     margin-bottom: 20px;
