@@ -1,12 +1,12 @@
-let campoBusqueda3 = document.querySelector(".search");
-let inputBusqueda3 = document.querySelector(".busqueda");
+let campoBusqueda = document.querySelector(".search");
+let inputBusqueda = document.querySelector(".busqueda");
 
-campoBusqueda3.addEventListener('submit', function(event){
+campoBusqueda.addEventListener('submit', function(event){
     event.preventDefault();
 
-    if ( inputBusqueda3.value == "") {
+    if ( inputBusqueda.value == "") {
         alert ("No se puede dejar el campo en blanco")
-    } else if (inputBusqueda3.value.length < 3){
+    } else if (inputBusqueda.value.length < 3){
         alert ("El termino debe tener al menos 3 letras")
     } else{
         this.submit()
@@ -27,7 +27,7 @@ fetch(url3)
         for (let i=0; i < datos.length; i++){
             lista3.innerHTML +=`
                 <li>
-                    <a href="./category.html?categoria=${datos[i]}">${datos[i].name}</a>
+                    <a href="./category.html?categoria=${datos[i].slug}">${datos[i].name}</a>
                 </li>`;
         }
     })
@@ -38,11 +38,11 @@ fetch(url3)
 
 //category
 
-let queryString = location.search;
-let queryStringObj = new URLSearchParams (queryString);
-let categoria = queryStringObj.get("category");
+let queryString3 = location.search;
+let queryStringObj3 = new URLSearchParams (queryString3);
+let categoria = queryStringObj3.get("categoria");
 
-let productosCategory = document.querySelector(".categoryprod");
+let productosCategory = document.querySelector(".productoscategory");
 let titulo = document.querySelector(".skinbody");
 titulo.innerText = categoria;
 
@@ -53,8 +53,7 @@ fetch(urlCategory)
     return response.json()
 })
 
-.then (function (data) {
-    
+.then (function (data) { 
     for (let i = 0; i< data.products.length; i++){
         let producto = data.products[i];
         productosCategory.innerHTML += `
@@ -68,8 +67,10 @@ fetch(urlCategory)
             <a class="details" href="product.html?id=${producto.id}">See details</a>
         </article>`;
     }
+
 })
 
 .catch (function (error) {
     console.log(error);
+    productosCategory.innerHTML = "<p> Error al cargar las categorias</p>"
 })

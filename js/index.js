@@ -27,7 +27,7 @@ fetch(url)
         for (let i=0; i < datos.length; i++){
             lista.innerHTML +=`
                 <li>
-                    <a href="./category.html?categoria=${datos[i]}">${datos[i].name}</a>
+                    <a href="./category.html?categoria=${datos[i].slug}">${datos[i].name}</a>
                 </li>`;
         }
     })
@@ -91,6 +91,7 @@ function mostrarProductos(lista, contenedor){
         </article>
      `;
     }
+
     contenedor.innerHTML = contenido;
 }
 

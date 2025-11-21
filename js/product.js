@@ -38,9 +38,9 @@ fetch(url5)
 
 
 //product
-let queryString = location.search;
-let queryStringObj = new URLSearchParams (queryString);
-let id = queryStringObj.get('id');
+let queryString5 = location.search;
+let queryStringObj5 = new URLSearchParams (queryString5);
+let id = queryStringObj5.get('id');
 
 let detalleProd = document.querySelector(".detalleprod");
 let reviewsProd = document.querySelector(".review");
