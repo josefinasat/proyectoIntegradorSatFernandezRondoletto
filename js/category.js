@@ -1,12 +1,12 @@
-let campoBusqueda = document.querySelector(".search");
-let inputBusqueda = document.querySelector(".busqueda");
+let campoBusqueda3 = document.querySelector(".search");
+let inputBusqueda3 = document.querySelector(".busqueda");
 
-campoBusqueda.addEventListener('submit', function(event){
+campoBusqueda3.addEventListener('submit', function(event){
     event.preventDefault();
 
-    if ( inputBusqueda.value == "") {
+    if ( inputBusqueda3.value == "") {
         alert ("No se puede dejar el campo en blanco")
-    } else if (inputBusqueda.value.length < 3){
+    } else if (inputBusqueda3.value.length < 3){
         alert ("El termino debe tener al menos 3 letras")
     } else{
         this.submit()
@@ -42,7 +42,7 @@ let queryString3 = location.search;
 let queryStringObj3 = new URLSearchParams (queryString3);
 let categoria = queryStringObj3.get("categoria");
 
-let productosCategory = document.querySelector(".productoscategory");
+let productosCategory = document.querySelector(".contenedores");
 let titulo = document.querySelector(".skinbody");
 titulo.innerText = categoria;
 

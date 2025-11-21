@@ -60,7 +60,7 @@ fetch (`https://dummyjson.com/products/${id}`)
                 <p><strong>Brand:</strong> ${data.brand} </p>
                 <p><strong>Description:</strong> ${data.description} </p>
                 <p><strong>Price:</strong> ${data.price} </p>
-                <p><strong>Category: </strong><a href="category.html?category=${data.category}">${data.category}</a></p>
+                <p><strong>Category: </strong><a href="category.html?categoria=${data.category}">${data.category}</a></p>
                 <p><strong>Stock:</strong> ${data.stock} </p>
                 <p><strong>Tags:</strong></p>
                 <ul>

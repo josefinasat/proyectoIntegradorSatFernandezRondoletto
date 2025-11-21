@@ -1,11 +1,12 @@
-let campoBusqueda7 = document.querySelector("form");
+let campoBusqueda7 = document.querySelector(".search");
+let inputBusqueda7 = document.querySelector(".busqueda");
 
 campoBusqueda7.addEventListener('submit', function(event){
     event.preventDefault();
 
-    if ( campoBusqueda7.value == "") {
+    if ( inputBusqueda7.value == "") {
         alert ("No se puede dejar el campo en blanco")
-    } else if (campoBusqueda7.length < 3){
+    } else if (inputBusqueda7.value.length < 3){
         alert ("El termino debe tener al menos 3 letras")
     } else{
         this.submit()
@@ -42,7 +43,7 @@ let queryString7 = location.search;
 let queryStringObj7 = new URLSearchParams (queryString7);
 let terminoBuscado = queryStringObj7.get('buscar'); 
 
-let searchProductos = document.querySelector(".searchr");
+let searchProductos = document.querySelector(".contenedores");
 let searchTitulo = document.querySelector(".titulosearch");
 
 let urlSearch = `https://dummyjson.com/products/search?q=${terminoBuscado}`

@@ -79,15 +79,11 @@ function mostrarProductos(lista, contenedor){
         <article class= "productos">
             <p class= "precio">$${producto.price}</p>
             <div class= "medio">
-                <div>
-                    <img class= "imagenes" src="${producto.thumbnail}" alt="${producto.title}">
-                </div>
+                <img class= "imagenes" src="${producto.thumbnail}" alt="${producto.title}">
             </div>
             <h3 class="nombre">${producto.title}</h3>
             <p class="descripcion">${producto.description}</p>
-            <a class="details" href="./product.html?id=${producto.id}">
-                Ver detalle
-            </a>
+            <a class="details" href="./product.html?id=${producto.id}">See details</a>
         </article>
      `;
     }

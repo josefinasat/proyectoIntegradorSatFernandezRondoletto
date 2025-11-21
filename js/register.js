@@ -41,27 +41,27 @@ fetch(url6)
 let form = document.querySelector("#registerForm");
 let email = document.querySelector("#email");
 let password= document.querySelector("#contraseña");
-let repetir = document.querySelector("#repetir")
+let repetir = document.querySelector("#repetir");
+let aceptar = document.querySelector("#terminos")
 
 form.addEventListener("submit", function(event){
     event.preventDefault();
     if (email.value === ""){
         alert("El campo Email es obligatorio, completarlo.");
         return;
-    }
-    else if (password.value === ""){
+    } else if (password.value === ""){
         alert("El campo Contraseña es obligatorio, completarlo.");
         return;
-    }
-    else if (password.value.length < 6){
+    } else if (password.value.length < 6){
         alert("La contraseña debe tener al menos 6 caracteres.")
         return;
-    }
-    else if (password.value !== repetir.value){
+    } else if (password.value !== repetir.value){
         alert("Las contraseñas no coinciden, debes repetir la contaseña.");
         return;
-    }
-    else {
+    } else if (!aceptar.value){
+        alert("Debe aceptar los términos y condiciones.");
+        return;
+    } else {
         location.href = "./login.html"
     }
 })
